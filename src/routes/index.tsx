@@ -13,10 +13,8 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route element={<RequireAuth />}>
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/" index element={<DashboardPage />} />
         </Route>
-
-        {/* <Route path="/" index element={<Home />} /> */}
 
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<LoginPage />} />

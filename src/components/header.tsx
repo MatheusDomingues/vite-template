@@ -70,19 +70,22 @@ export function Header({ hasBackButton }: { hasBackButton?: boolean }) {
   return (
     <header className="border-b flex justify-center px-4 min-h-16 w-full sticky top-0 left-0 z-50 bg-card">
       <div className="flex items-center justify-between w-full gap-8 max-w-7xl">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           {hasBackButton && (
             <Button variant="outline" size="icon" onClick={() => navigate(-1)}>
               <ArrowLeft />
             </Button>
           )}
-          <img
-            src={
-              theme === "dark" ? "/images/logo-dark.png" : "/images/logo.png"
-            }
-            alt="Linkify logo"
-            className="h-8 w-fit"
-          />
+          <div className="flex gap-2 items-center">
+            <img
+              src="/images/icon.png"
+              alt={import.meta.env.VITE_PRIVATE_LABEL ?? "Linkify" + " logo"}
+              className="size-8"
+            />
+            <p className="text-3xl font-bold">
+              {import.meta.env.VITE_PRIVATE_LABEL ?? "Linkify"}
+            </p>
+          </div>
         </div>
         <div className="flex gap-4 items-center">
           <Button variant="outline" size="icon" onClick={toggleTheme}>

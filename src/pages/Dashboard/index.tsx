@@ -95,12 +95,12 @@ export default function DashboardPage() {
 
   return (
     <div className="flex flex-col gap-6 h-full font-display max-w-7xl mx-auto">
-      <h1 className="text-2xl font-bold">Dashboard</h1>
+      <h1 className="text-3xl font-bold">Dashboard</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-center">
         <Card className="w-full">
           <CardContent className="flex flex-col justify-evenly gap-6 px-0">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold flex justify-between w-full items-center">
+              <CardTitle className="text-3xl font-bold flex justify-between w-full items-center">
                 0 <ServerIcon />
               </CardTitle>
               <CardDescription className="text-base mt-6">
@@ -112,7 +112,7 @@ export default function DashboardPage() {
         <Card className="w-full">
           <CardContent className="flex flex-col justify-evenly gap-6 px-0">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold flex justify-between w-full items-center">
+              <CardTitle className="text-3xl font-bold flex justify-between w-full items-center">
                 0 <MessagesSquareIcon />
               </CardTitle>
               <CardDescription className="text-base mt-6">
@@ -124,7 +124,7 @@ export default function DashboardPage() {
         <Card className="w-full">
           <CardContent className="flex flex-col justify-evenly gap-6 px-0">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold flex justify-between w-full items-center">
+              <CardTitle className="text-3xl font-bold flex justify-between w-full items-center">
                 0 <CheckCheckIcon />
               </CardTitle>
               <CardDescription className="text-base mt-6">
