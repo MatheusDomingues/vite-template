@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# Linkify Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front end of Linkify, a multi-tenant SaaS for automating customer messaging on WhatsApp. It is the dashboard where each organization signs in and follows its WhatsApp instances. The back end lives in [fastify-example](https://github.com/MatheusDomingues/fastify-example).
 
-Currently, two official plugins are available:
+## What's inside
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Auth flow:** login, sign-up, password recovery with OTP and protected routes
+- **Dashboard** with instance metrics and charts
+- **White-label ready:** the product name comes from an environment variable
+- **UI kit** built on shadcn/ui (Radix + Tailwind CSS v4), with light and dark themes
+- **Forms** with React Hook Form and Zod
+- **Production server** in Express that serves the build with compression and proxies `/api` to the back end
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+TypeScript · React 19 · Vite · Tailwind CSS · shadcn/ui · React Router · Zod · Recharts · Express
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting started
+
+Create a `.env` file:
+
+```bash
+API_URL=http://localhost:5000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+pnpm install
+pnpm dev
 ```
