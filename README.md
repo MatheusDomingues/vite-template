@@ -1,11 +1,11 @@
-# Linkify Web
+# Vite Template
 
-Front end of Linkify, a multi-tenant SaaS for automating customer messaging on WhatsApp. It is the dashboard where each organization signs in and follows its WhatsApp instances. The back end lives in [fastify-example](https://github.com/MatheusDomingues/fastify-example).
+A React dashboard starter with a complete auth flow, a reusable UI kit and a production server. It started as the early base of Linkify, a WhatsApp messaging SaaS, and was kept as a template after the product evolved. It pairs with the [fastify-example](https://github.com/MatheusDomingues/fastify-example) API.
 
 ## What's inside
 
 - **Auth flow:** login, sign-up, password recovery with OTP and protected routes
-- **Dashboard** with instance metrics and charts
+- **Dashboard** layout with charts
 - **White-label ready:** the product name comes from an environment variable
 - **UI kit** built on shadcn/ui (Radix + Tailwind CSS v4), with light and dark themes
 - **Forms** with React Hook Form and Zod
